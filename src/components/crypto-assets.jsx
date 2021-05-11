@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import MetaMaskNotConnected from "../helping-components/metamaskError";
 import Color from "../contracts/crypto-assets/Color.json";
 import styled from "styled-components";
-
+import { PageTitle } from "../styling/style";
 class CryptoAssets extends Component {
   state = {
     web3: null,
@@ -72,15 +72,10 @@ class CryptoAssets extends Component {
   };
 
   render() {
-    const Title = styled.h1`
-      font-size: 1.5em;
-      text-align: center;
-      color: palevioletred;
-    `;
     if (!this.state.web3) return <MetaMaskNotConnected />;
     return (
       <div>
-        <Title>Crypto Assets</Title>
+        <PageTitle>Crypto Assets</PageTitle>
         <div className="container-fluid mt-5">
           <div className="row text-center mb-2">
             Total Supply: {this.state.totalSupply}

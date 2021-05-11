@@ -15,6 +15,7 @@ import MyToken from "../contracts/ico-erc20-mintable/MyToken.json";
 import MyTokenSale from "../contracts/ico-erc20-mintable/MyTokenSale.json";
 import KYCContract from "../contracts/ico-erc20-mintable/KYCContract.json";
 import MetaMaskNotConnected from "../helping-components/metamaskError";
+import { PageTitle } from "../styling/style";
 
 class DeXTokens extends React.Component {
   state = {
@@ -137,6 +138,7 @@ class DeXTokens extends React.Component {
     return (
       <div>
         <Container>
+          <PageTitle>deX Token</PageTitle>
           <Row className="RowSpacing">
             <Col>
               <h5 style={{ float: "left" }}>
